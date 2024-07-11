@@ -3,6 +3,7 @@ import { ApiError } from "../utils/ApiError.js";
 import { User } from "../models/user.model.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import * as crypto from 'crypto';
+import nodemailer from "nodemailer";
 
 
 const registerUser = asyncHandler( async (req,res) => {
