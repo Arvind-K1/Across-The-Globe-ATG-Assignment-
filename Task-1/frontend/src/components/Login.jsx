@@ -16,15 +16,14 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post('https://localhost:8000/api/users/login', formData, {
-                withCredentials: true, // Include cookies
+                withCredentials: true, 
             });
 
-            console.log(response.data); // Log the entire response data to inspect
+            console.log(response.data); 
 
-            navigate('/home'); // Redirect to the home page on successful login
+            navigate('/home'); 
         } catch (err) {
             console.error('Error:', err.response.data);
-            // Handle specific errors or log the entire error object for debugging
         }
     };
 
